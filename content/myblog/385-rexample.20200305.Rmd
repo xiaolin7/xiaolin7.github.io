@@ -1,0 +1,66 @@
+---
+title: 385.Rexample
+author: Xiao Lin
+date: '2020-03-05'
+slug: 385-rexample
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-03-05T12:59:28-06:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+menu:
+  example:
+    parent: Statistics
+    weight: 1
+---
+# Exercise 2
+## a)
+```{r}
+head(iris) 
+hist(x = iris$Sepal.Length, main = "Histogram of Sepal Length", xlab = "Sepal Length",
+     breaks = 15, border = "dodgerblue", probability = TRUE,
+     ylim = c(0, 0.65), xlim = c(4, 8.2))
+box()
+grid()
+new_line=mean(iris$Sepal.Length)
+new_line
+abline(v=new_line,col="red")
+text(x = 6,y=0.4, labels="x=5.843",col="red",srt=90)  #srt rotate 90 degree
+
+```
+
+## b)
+```{r}
+hist(x=faithful$eruptions,breaks=20,xlim=c(1,6),freq=FALSE,
+     xlab="Eruption Time (mins)", main="Histogram of Old Faithful Geyser Eruption Time" 
+     ,border="blue")
+box()
+grid()
+
+d <- density(faithful$eruptions) # returns the density data
+lines(d,col="orange")
+
+```
+
+## c)
+```{r}
+par(mfrow=c(1,2))  #1row, 2 colm
+hist(x=faithful$waiting,freq=FALSE,border="blue",
+     xlab="Waiting time(mins)")
+box()
+grid()
+plot(formula=eruptions~waiting, data=faithful,pch=16,
+     col="blue",main="Waiting Time vs. Eruption Time",
+     xlab="Waiting Time(min)",ylab="Eruption Time(min)")
+box()
+grid()
+
+```
+
