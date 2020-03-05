@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiao Lin</title>
+    <link>/</link>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xiao Lin</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 28 Jun 2018 00:00:00 +0100</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:square]</url>
+      <title>Xiao Lin</title>
+      <link>/</link>
+    </image>
+    
+    <item>
+      <title>STAT 385 R Reflection</title>
+      <link>/myblog/385.1/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
+      <guid>/myblog/385.1/</guid>
+      <description>&lt;p&gt;Learning R is fun!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Counseling Center Paraprofessional (CCP) Program</title>
+      <link>/myblog/ccp/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/myblog/ccp/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;My E-Portfolio&lt;/strong&gt;
+&lt;a href=&#34;https://illinois.digication.com/xiao-lin-ccp/home&#34;&gt;https://illinois.digication.com/xiao-lin-ccp/home&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cousneling Center Paraprofessional Program Detail&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ccp-program-mission&#34;&gt;CCP Program Mission&lt;/h2&gt;
+&lt;p&gt;In keeping with the Counseling Center mission, the training and and outreach of the Counseling Center Paraprofessional program strives to incorporate a multicultural, developmental, and strenghs-based approach to psychoeducational services offered.&lt;/p&gt;
+&lt;h2 id=&#34;about-the-paraprofessional-program&#34;&gt;About the Paraprofessional Program&lt;/h2&gt;
+&lt;p&gt;Counseling Center Paraprofessionals (CCPs) are students from ALL departments on campus and with many different majors. They are students who want to make a difference in someone’s life while having a good learning experience.&lt;/p&gt;
+&lt;p&gt;The CCP program provides training in communication and helping skills with practical experience in providing developmental and preventive services to students. In addition to these skills, students gain knowledge in mental health concerns, cultural competence, program planning, practical applications for research, public speaking, organizational leadership, and more. These skills are beneficial for a wide variety of career and graduate school fields, including the helping professions, education, health promotion, community development, human resources, and many more.&lt;/p&gt;
+&lt;p&gt;The CCP Program provides a great experience; it received the 2013 University of Illinois Student Affairs Outstanding Program Award.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>385.Rexample</title>
+      <link>/myblog/385-rexample/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/myblog/385-rexample/</guid>
+      <description>
+
+
+&lt;div id=&#34;exercise-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Exercise 2&lt;/h1&gt;
+&lt;div id=&#34;a&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;a)&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(iris) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(x = iris$Sepal.Length, main = &amp;quot;Histogram of Sepal Length&amp;quot;, xlab = &amp;quot;Sepal Length&amp;quot;,
+     breaks = 15, border = &amp;quot;dodgerblue&amp;quot;, probability = TRUE,
+     ylim = c(0, 0.65), xlim = c(4, 8.2))
+box()
+grid()
+new_line=mean(iris$Sepal.Length)
+new_line&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 5.843333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;abline(v=new_line,col=&amp;quot;red&amp;quot;)
+text(x = 6,y=0.4, labels=&amp;quot;x=5.843&amp;quot;,col=&amp;quot;red&amp;quot;,srt=90)  #srt rotate 90 degree&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/myblog/385-rexample.20200305_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;b&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;b)&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(x=faithful$eruptions,breaks=20,xlim=c(1,6),freq=FALSE,
+     xlab=&amp;quot;Eruption Time (mins)&amp;quot;, main=&amp;quot;Histogram of Old Faithful Geyser Eruption Time&amp;quot; 
+     ,border=&amp;quot;blue&amp;quot;)
+box()
+grid()
+
+d &amp;lt;- density(faithful$eruptions) # returns the density data
+lines(d,col=&amp;quot;orange&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/myblog/385-rexample.20200305_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;c&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;c)&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,2))  #1row, 2 colm
+hist(x=faithful$waiting,freq=FALSE,border=&amp;quot;blue&amp;quot;,
+     xlab=&amp;quot;Waiting time(mins)&amp;quot;)
+box()
+grid()
+plot(formula=eruptions~waiting, data=faithful,pch=16,
+     col=&amp;quot;blue&amp;quot;,main=&amp;quot;Waiting Time vs. Eruption Time&amp;quot;,
+     xlab=&amp;quot;Waiting Time(min)&amp;quot;,ylab=&amp;quot;Eruption Time(min)&amp;quot;)
+box()
+grid()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/myblog/385-rexample.20200305_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/terms/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
